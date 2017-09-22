@@ -1,12 +1,22 @@
 # Craft DB Sessions Handler
 
-For Craft 2.x
+For Craft 2.x. Sets up a database sesssion handler using Craft's 
+existing DB and Caching libraries to ensure that only a single 
+database connection is ever created.
 
-## Installation & Usage
+This is not a true Craft plugin, but is best distributed as one.
 
-Install through composer (recommended) or manually place all files into a `craft/plugins/dbsessions` directory.
+## Installation
 
-Finally add the following at the very top of your `public/index.php` file:
+Install through composer (recommended):
+
+    composer require imarc/craft-dbsessions
+
+Alternatively place all files into a `craft/plugins/dbsessions` directory.
+
+## Usage
+
+Add the following at the very top of your `public/index.php` file:
 
     require __DIR__ . '/../craft/plugins/dbsessions/SessionHandler.php';
     \Imarc\CraftDatabaseSessions\SessionHandler::register();
