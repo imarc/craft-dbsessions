@@ -1,0 +1,20 @@
+{
+    "name": "imarc/craft-dbsessions",
+    "description": "A database session handler specifically for Craft CMS",
+    "homepage": "https://github.com/imarc/craft-dbsessions",
+    "type": "craft-plugin",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Jeff Turcotte",
+            "email": "jeff@imarc.com"
+        }
+    ],
+    "autoload": {
+        "classmap": ["SessionHandler.php"]
+    },
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
