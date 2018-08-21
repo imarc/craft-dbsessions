@@ -31,7 +31,7 @@ CREATE TABLE dbsessions_sessions (
     id char(128) NOT NULL PRIMARY KEY,
     expire int(11) NULL,	 
     value longblob NULL
-)
+);
 ```
 
 ## Why?
