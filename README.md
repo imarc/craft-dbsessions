@@ -23,6 +23,17 @@ Add the following at the very top of your `public/index.php` file:
 
 Your sessions will now be stored in craft's database instead of on the filesystem.
 
+The `dbsessions_sessions` database table used by this library *should* be created automatically. If there
+are restrictive database permissions, you can use the following migration to create the table manually:
+
+```(sql)
+CREATE TABLE dbsessions_sessions (
+    id char(128) NOT NULL PRIMARY KEY,
+    expire int(11) NULL,	 
+    value longblob NULL
+)
+```
+
 ## Why?
 
 Sometimes, in an high-availability environment with multiple application servers, storing the sessions 
