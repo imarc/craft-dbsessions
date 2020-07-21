@@ -16,9 +16,11 @@ Alternatively place all files into a `craft/plugins/dbsessions` directory.
 
 ## Usage
 
-Add the following at the very top of your `public/index.php` file:
+1. Edit the general.php config file in your Craft CMS instance to use the `overridePhpSessionLocation` setting. More Info at: https://docs.craftcms.com/v2/config-settings.html#overridephpsessionlocation
 
-    require __DIR__ . '/../craft/plugins/dbsessions/SessionHandler.php';
+1. Add the following at the very top of your `public/index.php` file:
+
+    ```require __DIR__ . '/../craft/plugins/dbsessions/SessionHandler.php';
     \Imarc\CraftDatabaseSessions\SessionHandler::register();
 
 Your sessions will now be stored in craft's database instead of on the filesystem.
