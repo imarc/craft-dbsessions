@@ -31,7 +31,6 @@ class SessionHandler implements \SessionHandlerInterface
     {
         $handler = new self($config);
         session_set_save_handler($handler, true);
-        ini_set('session.save_handler', 'user');
     }
 
 
@@ -161,6 +160,6 @@ class SessionHandler implements \SessionHandlerInterface
      */
     public function __destruct()
     {
-        session_write_close(true);
+        session_write_close();
     }
 }
